@@ -33,5 +33,13 @@ public class UserService {
         return user;
     }
 
+    public Boolean deleteUser (Long id){
+        try{
+            userRepository.deleteById(id);
+            return true;
+        }catch(Exception e){
+            return false;
+        }
+    }
 
 }
